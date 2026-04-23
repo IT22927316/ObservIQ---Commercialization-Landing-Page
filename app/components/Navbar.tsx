@@ -1,0 +1,68 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import Container from "./Container";
+
+export default function Navbar() {
+  const navRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".nav-anim",
+        { opacity: 0, y: -16 },
+        { opacity: 1, y: 0, duration: 0.7, ease: "power3.out", delay: 0.05 }
+      );
+    }, navRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <header
+      ref={navRef}
+      className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-xl"
+    >
+      <Container className="nav-anim flex h-16 items-center justify-between">
+        <div className="flex items-center gap-3">
+          {/* Replaced text-based logo with SVG image, reduced size */}
+          <img src="/images/oblogo.svg" alt="ObserviQ Logo" className="h-6" />
+        </div>
+
+        <nav className="hidden items-center gap-8 md:flex">
+          <a href="#home" className="text-[13px] text-black/55 transition hover:text-black/85">
+            Home
+          </a>
+          <a href="#domain" className="text-[13px] text-black/55 transition hover:text-black/85">
+            Domain
+          </a>
+          <a href="#milestones" className="text-[13px] text-black/55 transition hover:text-black/85">
+            Milestones
+          </a>
+          <a href="#documents" className="text-[13px] text-black/55 transition hover:text-black/85">
+            Documents
+          </a>
+          <a href="#slides" className="text-[13px] text-black/55 transition hover:text-black/85">
+            Slides
+          </a>
+          <a href="#about" className="text-[13px] text-black/55 transition hover:text-black/85">
+            About
+          </a>
+          <a href="#contact" className="text-[13px] text-black/55 transition hover:text-black/85">
+            Contact
+          </a>
+        </nav>
+
+        {/* Button color fix to ensure visibility with white text */}
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center rounded-full bg-black/90 px-5 py-3 text-sm font-medium text-white no-underline transition hover:bg-black/80"
+          style={{ color: 'white' }}
+        >
+          Contact us
+        </a>
+      </Container>
+    </header>
+  );
+}
