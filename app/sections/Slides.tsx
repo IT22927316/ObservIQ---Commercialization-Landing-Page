@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Container from "../components/Container";
 
+// Define slide items
 const slideItems = [
   {
     id: "SLD 0.1",
@@ -42,6 +43,7 @@ const slideItems = [
   },
 ];
 
+// Define motion animations
 const headerMotion = {
   hidden: { opacity: 0, y: 18 },
   visible: {
@@ -49,7 +51,7 @@ const headerMotion = {
     y: 0,
     transition: {
       duration: 0.65,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Explicitly cast to 'easeOut' as const
     },
   },
 };
@@ -71,11 +73,12 @@ const itemMotion = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Explicitly cast to 'easeOut' as const
     },
   },
 };
 
+// Helper function to get tone classes
 function getToneClasses(tone: string) {
   switch (tone) {
     case "gold":

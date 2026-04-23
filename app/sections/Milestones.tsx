@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Container from "../components/Container";
 
+// Define milestone items
 const milestoneItems = [
   {
     id: "01",
@@ -47,6 +48,7 @@ const milestoneItems = [
   },
 ];
 
+// Define motion animations
 const headerMotion = {
   hidden: { opacity: 0, y: 18 },
   visible: {
@@ -54,7 +56,7 @@ const headerMotion = {
     y: 0,
     transition: {
       duration: 0.65,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Explicitly cast to 'easeOut' as const
     },
   },
 };
@@ -67,7 +69,7 @@ const itemMotion = {
     transition: {
       delay: 0.06 + i * 0.06,
       duration: 0.45,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Explicitly cast to 'easeOut' as const
     },
   }),
 };
@@ -149,7 +151,7 @@ export default function Milestones() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.28, ease: "easeOut" }}
+                        transition={{ duration: 0.28, ease: "easeOut" as const }}
                         className="overflow-hidden"
                       >
                         <div className="pb-5 pr-0 sm:pr-24">

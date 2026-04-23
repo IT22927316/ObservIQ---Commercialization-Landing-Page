@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Container from "../components/Container";
 
+// Define stagger container animation
 const staggerContainer = {
   hidden: {},
   visible: {
@@ -13,6 +14,7 @@ const staggerContainer = {
   },
 };
 
+// Define fade-up animation
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
   visible: {
@@ -20,7 +22,7 @@ const fadeUp = {
     y: 0,
     transition: {
       duration: 0.65,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Explicitly use "easeOut" as const to match Framer Motion types
     },
   },
 };

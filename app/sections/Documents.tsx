@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Container from "../components/Container";
 
+// Define document items
 const documentItems = [
   {
     id: "DOC 0.1",
@@ -55,6 +56,7 @@ const documentItems = [
   },
 ];
 
+// Define motion animations
 const headerMotion = {
   hidden: { opacity: 0, y: 18 },
   visible: {
@@ -62,7 +64,7 @@ const headerMotion = {
     y: 0,
     transition: {
       duration: 0.65,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Explicitly use 'easeOut' as a valid easing function
     },
   },
 };
@@ -84,7 +86,7 @@ const itemMotion = {
     y: 0,
     transition: {
       duration: 0.45,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Explicitly use 'easeOut' as a valid easing function
     },
   },
 };
@@ -156,7 +158,8 @@ export default function Documents() {
                     <a
                       href={item.href}
                       className="inline-flex items-center justify-center rounded-full border border-black/8 px-3 py-1.5 text-[11px] text-black/70 transition hover:bg-black/[0.03] hover:text-black"
-                      target="_blank">
+                      target="_blank"
+                    >
                       View link
                     </a>
                   </div>

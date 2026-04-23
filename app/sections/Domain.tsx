@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Container from "../components/Container";
 
+// Define domain items
 const domainItems = [
   {
     figure: "FIG 0.1",
@@ -48,6 +49,7 @@ const domainItems = [
   },
 ];
 
+// Define motion animations
 const headerMotion = {
   hidden: { opacity: 0, y: 22 },
   visible: {
@@ -55,7 +57,7 @@ const headerMotion = {
     y: 0,
     transition: {
       duration: 0.7,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Use "easeOut" as const to resolve the TypeScript error
     },
   },
 };
@@ -77,7 +79,7 @@ const itemMotion = {
     y: 0,
     transition: {
       duration: 0.55,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Use "easeOut" as const to resolve the TypeScript error
     },
   },
 };

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Container from "../components/Container";
 
+// Define team members
 const teamMembers = [
   {
     id: "MEM 0.1",
@@ -12,7 +13,7 @@ const teamMembers = [
     achievement:
       "Leads research and development for metrics and signal processing. Contributes to defining signal strategies for the project.",
     image: "/images/im1.png", // Image path for person1
-    linkedin: "https://www.linkedin.com/in/rusiruds/" // Dummy LinkedIn link
+    linkedin: "https://www.linkedin.com/in/rusiruds/", // Dummy LinkedIn link
   },
   {
     id: "MEM 0.2",
@@ -22,7 +23,7 @@ const teamMembers = [
     achievement:
       "Focused on structuring and enriching the system's logs, improving data flow and enhancing insights derived from system activities.",
     image: "/images/im2.png", // Image path for person2
-    linkedin: "https://www.linkedin.com/in/nimashagamage/" // Dummy LinkedIn link
+    linkedin: "https://www.linkedin.com/in/nimashagamage/", // Dummy LinkedIn link
   },
   {
     id: "MEM 0.3",
@@ -32,7 +33,7 @@ const teamMembers = [
     achievement:
       "Developed and fine-tuned adaptive alerting mechanisms to improve the system's responsiveness to critical events.",
     image: "/images/im3.png", // Image path for person3
-    linkedin: "https://www.linkedin.com/in/nayanahari-kusalanjani/" // Dummy LinkedIn link
+    linkedin: "https://www.linkedin.com/in/nayanahari-kusalanjani/", // Dummy LinkedIn link
   },
   {
     id: "MEM 0.4",
@@ -42,10 +43,11 @@ const teamMembers = [
     achievement:
       "Managed the detection of anomalies in system behavior and generated insights to support critical decision-making.",
     image: "/images/im4a.png", // Image path for person4
-    linkedin: "https://www.linkedin.com/in/lavindu-yomith-5b9b69187/" // Dummy LinkedIn link
+    linkedin: "https://www.linkedin.com/in/lavindu-yomith-5b9b69187/", // Dummy LinkedIn link
   },
 ];
 
+// Define motion animations
 const headerMotion = {
   hidden: { opacity: 0, y: 18 },
   visible: {
@@ -53,7 +55,7 @@ const headerMotion = {
     y: 0,
     transition: {
       duration: 0.65,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Use the string as the correct type for ease
     },
   },
 };
@@ -75,7 +77,7 @@ const itemMotion = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Use the string as the correct type for ease
     },
   },
 };

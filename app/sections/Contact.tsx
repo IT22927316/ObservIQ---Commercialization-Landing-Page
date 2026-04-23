@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Container from "../components/Container";
 
+// Define contact items
 const contactItems = [
   {
     id: "CNT 0.1",
@@ -33,6 +34,7 @@ const contactItems = [
   },
 ];
 
+// Define motion animations
 const headerMotion = {
   hidden: { opacity: 0, y: 18 },
   visible: {
@@ -40,7 +42,7 @@ const headerMotion = {
     y: 0,
     transition: {
       duration: 0.65,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Use valid Framer Motion easing
     },
   },
 };
@@ -62,11 +64,12 @@ const itemMotion = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: "easeOut" as const, // Use valid Framer Motion easing
     },
   },
 };
 
+// Helper function to get tone classes
 function getToneClasses(tone: string) {
   switch (tone) {
     case "gold":
