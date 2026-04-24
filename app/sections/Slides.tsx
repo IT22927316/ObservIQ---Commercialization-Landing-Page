@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Container from "../components/Container";
 
 // Define slide items
@@ -78,6 +79,14 @@ const itemMotion = {
   },
 };
 
+function LoadingSpinner() {
+  return (
+    <div className="flex items-center justify-center h-32">
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-black"></div>
+    </div>
+  );
+}
+
 // Helper function to get tone classes
 function getToneClasses(tone: string) {
   switch (tone) {
@@ -121,6 +130,14 @@ function getToneClasses(tone: string) {
 }
 
 export default function Slides() {
+  const [loadingPhase, setLoadingPhase] = useState<'loading' | 'low-quality' | 'high-quality'>('loading');
+
+  useEffect(() => {
+    const timer1 = setTimeout(() => setLoadingPhase('low-quality'), 1000);
+    const timer2 = setTimeout(() => setLoadingPhase('high-quality'), 2000);
+    return () => { clearTimeout(timer1); clearTimeout(timer2); };
+  }, []);
+
   return (
     <section id="slides" className="pb-20 sm:pb-24 lg:pb-28">
       <Container>
@@ -145,65 +162,69 @@ export default function Slides() {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={containerMotion}
-            className="mt-10 grid w-full gap-y-10 md:grid-cols-2 md:gap-x-8 lg:grid-cols-4 lg:gap-x-0"
-          >
-            {slideItems.map((item, index) => {
-              const tone = getToneClasses(item.tone);
-              const isFirstInDesktopRow = index % 4 === 0;
+          {loadingPhase === 'loading' ? (
+            <LoadingSpinner />
+          ) : (
+            <motion.div
+              variants={containerMotion}
+              className="mt-10 grid w-full gap-y-10 md:grid-cols-2 md:gap-x-8 lg:grid-cols-4 lg:gap-x-0"
+            >
+              {slideItems.map((item, index) => {
+                const tone = getToneClasses(item.tone);
+                const isFirstInDesktopRow = index % 4 === 0;
 
-              return (
-                <motion.div
-                  key={item.id}
-                  variants={itemMotion}
-                  className={`w-full border-black/8 ${
-                    !isFirstInDesktopRow ? "lg:border-l" : ""
-                  }`}
-                >
-                  <div className="w-full lg:pl-5 lg:pr-5">
-                    <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">
-                      {item.id}
-                    </div>
-
-                    <div className="flex items-center justify-center rounded-[14px] border border-black/8">
-                      <div className="text-center">
-                        <a href={item.href} target="_blank" rel="noopener noreferrer">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="h-full w-full object-contain rounded-[14px]"
-                          />
-                        </a>
+                return (
+                  <motion.div
+                    key={item.id}
+                    variants={itemMotion}
+                    className={`w-full border-black/8 ${
+                      !isFirstInDesktopRow ? "lg:border-l" : ""
+                    }`}
+                  >
+                    <div className="w-full lg:pl-5 lg:pr-5">
+                      <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">
+                        {item.id}
                       </div>
-                    </div>
 
-                    <div className="mt-5 w-full">
-                      <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-black/90">
-                        {item.title}
-                      </h3>
-
-                      <p className="mt-1 text-[13px] text-black/45">
-                        {item.description}
-                      </p>
-
-                      <div className="mt-4 max-w-[250px] text-[14px] leading-5.5 text-black/56">
-                        <div>
-                          <a
-                            href={item.href}
-                            className="inline-flex items-center justify-center rounded-full border border-black/8 px-3 py-1.5 text-[11px] text-black/70 transition hover:bg-black/[0.03] hover:text-black"
-                            target="_blank"
-                          >
-                            View Presentation
+                      <div className="flex items-center justify-center rounded-[14px] border border-black/8">
+                        <div className="text-center">
+                          <a href={item.href} target="_blank" rel="noopener noreferrer">
+                            <img
+                              src={item.image}
+                              alt={item.title}
+                              className={`h-full w-full object-contain rounded-[14px] ${loadingPhase === 'low-quality' ? 'blur-sm' : ''}`}
+                            />
                           </a>
                         </div>
                       </div>
+
+                      <div className="mt-5 w-full">
+                        <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-black/90">
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-1 text-[13px] text-black/45">
+                          {item.description}
+                        </p>
+
+                        <div className="mt-4 max-w-[250px] text-[14px] leading-5.5 text-black/56">
+                          <div>
+                            <a
+                              href={item.href}
+                              className="inline-flex items-center justify-center rounded-full border border-black/8 px-3 py-1.5 text-[11px] text-black/70 transition hover:bg-black/[0.03] hover:text-black"
+                              target="_blank"
+                            >
+                              View Presentation
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          )}
         </motion.div>
       </Container>
     </section>
