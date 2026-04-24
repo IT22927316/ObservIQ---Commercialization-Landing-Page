@@ -143,8 +143,7 @@ export default function Slides() {
       <Container>
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.12 }}
+          animate="visible"
           className="w-full"
         >
           <motion.div variants={headerMotion} className="w-full max-w-4xl">
