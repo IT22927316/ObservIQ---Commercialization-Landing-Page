@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Container from "../components/Container";
+import Link from "next/link";
 
 // Define domain items
 const domainItems = [
@@ -11,6 +12,7 @@ const domainItems = [
     description:
       "Review the existing academic and industry work related to observability, monitoring systems, anomaly detection, and intelligent system interpretation.",
     image: "/images/iso1.png", 
+    slug: "literature-survey",
   },
   {
     figure: "FIG 0.2",
@@ -18,6 +20,7 @@ const domainItems = [
     description:
       "Current observability platforms expose metrics, logs, alerts, and anomalies, but they still rely heavily on engineers to interpret what those signals mean across the system.",
     image: "/images/iso2.png", 
+    slug: "research-gap",
   },
   {
     figure: "FIG 0.3",
@@ -25,6 +28,7 @@ const domainItems = [
     description:
       "Define the central challenge of helping teams move from raw observability data to meaningful system understanding with less manual interpretation.",
     image: "/images/iso3.png", // Unique image path for this section
+    slug: "research-problem",
   },
   {
     figure: "FIG 0.4",
@@ -32,6 +36,7 @@ const domainItems = [
     description:
       "Present the goals of the project, including building a clearer observability workflow, improving interpretability, and structuring multi-signal analysis.",
     image: "/images/iso4.png", // Unique image path for this section
+    slug: "research-objectives",
   },
   {
     figure: "FIG 0.5",
@@ -39,6 +44,7 @@ const domainItems = [
     description:
       "ObserviQ is designed as an intelligent middleware layer that structures, analyzes, and connects different observability signals through specialized agents.",
     image: "/images/iso5.png", // Unique image path for this section
+    slug: "methodology",
   },
   {
     figure: "FIG 0.6",
@@ -46,6 +52,7 @@ const domainItems = [
     description:
       "The solution combines a modern web interface, observability workflows, agent-driven analysis, and system-level service modeling to present a clearer operational picture.",
     image: "/images/iso6.webp", // Unique image path for this section
+    slug: "technologies-used",
   },
 ];
 
@@ -139,9 +146,16 @@ export default function Domain() {
                         {item.title}
                       </h3>
 
-                      <p className="mt-1 max-w-[300px] text-[14px] leading-5.5 text-black/56">
+                      <p className="mt-1 max-w-full text-[14px] leading-5.5 text-black/56">
                         {item.description}
                       </p>
+
+                      <Link
+                        href={`/${item.slug}`}
+                        className="mt-3 inline-block text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
+                      >
+                        Read More →
+                      </Link>
                     </div>
                   </div>
                 </motion.div>

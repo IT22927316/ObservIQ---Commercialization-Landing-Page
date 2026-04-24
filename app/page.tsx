@@ -97,8 +97,20 @@ export default function HomePage() {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setIsReady(true), 1600);
-    return () => window.clearTimeout(timer);
+    // Check if preloader has already been shown in this session
+    const hasShownPreloader = localStorage.getItem('preloaderShown');
+    
+    if (hasShownPreloader) {
+      // Skip preloader if already shown
+      setIsReady(true);
+    } else {
+      // Show preloader and mark as shown
+      const timer = window.setTimeout(() => {
+        setIsReady(true);
+        localStorage.setItem('preloaderShown', 'true');
+      }, 1600);
+      return () => window.clearTimeout(timer);
+    }
   }, []);
 
   if (!isReady) {

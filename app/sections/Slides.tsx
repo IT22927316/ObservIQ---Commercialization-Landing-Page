@@ -38,7 +38,7 @@ const slideItems = [
     title: "Final presentation",
     description:
       "Final presentation deck summarizing the full project, key results, and final evaluation readiness.",
-    href: "#",
+    href: "",
     tone: "lilac",
     image: "/images/final.png", 
   },

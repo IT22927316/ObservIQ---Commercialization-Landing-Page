@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Container from "./Container";
@@ -26,42 +27,43 @@ export default function Navbar() {
     >
       <Container className="nav-anim flex h-16 items-center justify-between">
         <div className="flex items-center gap-3">
-          {/* Replaced text-based logo with SVG image, reduced size */}
-          <img src="/images/oblogo.svg" alt="ObserviQ Logo" className="h-6" />
+          <Link href="/" className="inline-flex items-center">
+            <img src="/images/oblogo.svg" alt="ObserviQ Logo" className="h-6" />
+          </Link>
         </div>
 
         <nav className="hidden items-center gap-8 md:flex">
-          <a href="#home" className="text-[13px] text-black/55 transition hover:text-black/85">
+          <Link href="/#home" className="text-[13px] text-black/55 transition hover:text-black/85">
             Home
-          </a>
-          <a href="#domain" className="text-[13px] text-black/55 transition hover:text-black/85">
+          </Link>
+          <Link href="/#domain" className="text-[13px] text-black/55 transition hover:text-black/85">
             Domain
-          </a>
-          <a href="#milestones" className="text-[13px] text-black/55 transition hover:text-black/85">
+          </Link>
+          <Link href="/#milestones" className="text-[13px] text-black/55 transition hover:text-black/85">
             Milestones
-          </a>
-          <a href="#documents" className="text-[13px] text-black/55 transition hover:text-black/85">
+          </Link>
+          <Link href="/#documents" className="text-[13px] text-black/55 transition hover:text-black/85">
             Documents
-          </a>
-          <a href="#slides" className="text-[13px] text-black/55 transition hover:text-black/85">
+          </Link>
+          <Link href="/#slides" className="text-[13px] text-black/55 transition hover:text-black/85">
             Slides
-          </a>
-          <a href="#about" className="text-[13px] text-black/55 transition hover:text-black/85">
+          </Link>
+          <Link href="/#about" className="text-[13px] text-black/55 transition hover:text-black/85">
             About
-          </a>
-          <a href="#contact" className="text-[13px] text-black/55 transition hover:text-black/85">
+          </Link>
+          <Link href="/#contact" className="text-[13px] text-black/55 transition hover:text-black/85">
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Button color fix to ensure visibility with white text */}
-        <a
-          href="#contact"
+        <Link
+          href="/#contact"
           className="inline-flex items-center justify-center rounded-full bg-black/90 px-5 py-3 text-sm font-medium text-white no-underline transition hover:bg-black/80"
           style={{ color: 'white' }}
         >
           Contact us
-        </a>
+        </Link>
       </Container>
     </header>
   );
