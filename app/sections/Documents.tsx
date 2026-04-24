@@ -160,7 +160,7 @@ export default function Documents() {
                       className="inline-flex items-center justify-center rounded-full border border-black/8 px-3 py-1.5 text-[11px] text-black/70 transition hover:bg-black/[0.03] hover:text-black"
                       target="_blank"
                     >
-                      View link
+                      View Source
                     </a>
                   </div>
                 </motion.div>
