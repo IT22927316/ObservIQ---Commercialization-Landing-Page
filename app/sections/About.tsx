@@ -119,42 +119,43 @@ export default function About() {
                 <motion.div
                   key={member.id}
                   variants={itemMotion}
-                  className={`w-full border-black/8 ${!isFirstInDesktopRow ? "lg:border-l" : ""}`}
-                >
-                  <div className="w-full lg:pl-5 lg:pr-5">
-                    <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">
-                      {member.id}
-                    </div>
-
-                    <div className="flex h-[250px] w-full items-center justify-center rounded-[14px]">
-                      <div className="text-center">
-                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                          <img
-                            src={member.image}
-                            alt={`${member.name}'s photo`}
-                            className="w-full h-full object-cover rounded-[14px]"
-                          />
-                        </a>
+                    className={`w-full min-h-0 border-black/8 ${!isFirstInDesktopRow ? "lg:border-l" : ""}`}
+                  >
+                    <div className="w-full min-h-0 lg:pl-5 lg:pr-5">
+                      <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">
+                        {member.id}
                       </div>
-                    </div>
-
-                    <div className="mt-5 w-full">
-                      <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-black/90">
-                        {member.name}
-                      </h3>
-
-                      <p className="mt-1 text-[13px] text-black/45">
-                        {member.role}
-                      </p>
 
                       <a
-                        href={`mailto:${member.email}`}
-                        className="mt-2 inline-block text-[13px] text-black/38 transition hover:text-black/65"
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full overflow-hidden rounded-[14px]"
                       >
-                        {member.email}
+                        <img
+                          src={member.image}
+                          alt={`${member.name}'s photo`}
+                          className="w-full h-auto object-contain rounded-[14px]"
+                        />
                       </a>
 
-                      <p className="mt-4 max-w-[250px] text-[14px] leading-5.5 text-black/56">
+                      <div className="mt-5 w-full">
+                        <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-black/90">
+                          {member.name}
+                        </h3>
+
+                        <p className="mt-1 text-[13px] text-black/45">
+                          {member.role}
+                        </p>
+
+                        <a
+                          href={`mailto:${member.email}`}
+                          className="mt-2 inline-block text-[13px] text-black/38 transition hover:text-black/65"
+                        >
+                          {member.email}
+                        </a>
+
+                      <p className="mt-4 w-full text-[14px] leading-5.5 text-black/56 break-words">
                         {member.achievement}
                       </p>
                     </div>
