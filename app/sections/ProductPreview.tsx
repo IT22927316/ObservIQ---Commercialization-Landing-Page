@@ -1481,7 +1481,6 @@ export default function ProductPreview() {
   );
   const [searchTerm, setSearchTerm] = useState("");
   const [realTimeMetrics, setRealTimeMetrics] = useState(initialMetrics);
-  const [isLoading, setIsLoading] = useState(false);
 
   const items = dashboardData[activeTab];
 
@@ -1511,11 +1510,7 @@ export default function ProductPreview() {
   }, [items, searchTerm]);
 
   const handleSidebarChange = (sidebar: SidebarKey) => {
-    if (sidebar !== activeSidebar) {
-      setIsLoading(true);
-      setActiveSidebar(sidebar);
-      setTimeout(() => setIsLoading(false), 300);
-    }
+    setActiveSidebar(sidebar);
   };
 
   const panel = useMemo(() => {
@@ -1658,7 +1653,7 @@ export default function ProductPreview() {
                     animate="animate"
                     exit="exit"
                   >
-                    {isLoading ? <LoadingSpinner /> : panel}
+                    {panel}
                   </motion.div>
                 </AnimatePresence>
               </div>

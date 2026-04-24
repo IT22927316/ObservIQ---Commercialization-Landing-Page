@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Container from "../components/Container";
 
 // Define team members
@@ -13,8 +12,8 @@ const teamMembers = [
     email: "IT22927316@my.sliit.lk",
     achievement:
       "Leads research and development for metrics and signal processing. Contributes to defining signal strategies for the project.",
-    image: "/images/im1.png", // Image path for person1
-    linkedin: "https://www.linkedin.com/in/rusiruds/", // Dummy LinkedIn link
+    image: "/images/im_1.png", 
+    linkedin: "https://www.linkedin.com/in/rusiruds/", 
   },
   {
     id: "MEM 0.2",
@@ -23,8 +22,8 @@ const teamMembers = [
     email: "IT22034922@my.sliit.lk",
     achievement:
       "Focused on structuring and enriching the system's logs, improving data flow and enhancing insights derived from system activities.",
-    image: "/images/im2.png", // Image path for person2
-    linkedin: "https://www.linkedin.com/in/nimashagamage/", // Dummy LinkedIn link
+    image: "/images/im_2.png", // Image path for person2
+    linkedin: "https://www.linkedin.com/in/nimashagamage/", 
   },
   {
     id: "MEM 0.3",
@@ -33,8 +32,8 @@ const teamMembers = [
     email: "IT22034540@my.sliit.lk",
     achievement:
       "Developed and fine-tuned adaptive alerting mechanisms to improve the system's responsiveness to critical events.",
-    image: "/images/im3.png", // Image path for person3
-    linkedin: "https://www.linkedin.com/in/nayanahari-kusalanjani/", // Dummy LinkedIn link
+    image: "/images/im_3.png", // Image path for person3
+    linkedin: "https://www.linkedin.com/in/nayanahari-kusalanjani/", 
   },
   {
     id: "MEM 0.4",
@@ -43,8 +42,8 @@ const teamMembers = [
     email: "IT22195470@my.sliit.lk",
     achievement:
       "Managed the detection of anomalies in system behavior and generated insights to support critical decision-making.",
-    image: "/images/im4a.png", // Image path for person4
-    linkedin: "https://www.linkedin.com/in/lavindu-yomith-5b9b69187/", // Dummy LinkedIn link
+    image: "/images/im_4.png", // Image path for person4
+    linkedin: "https://www.linkedin.com/in/lavindu-yomith-5b9b69187/",
   },
 ];
 
@@ -83,23 +82,7 @@ const itemMotion = {
   },
 };
 
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-32">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-black"></div>
-    </div>
-  );
-}
-
 export default function About() {
-  const [loadingPhase, setLoadingPhase] = useState<'loading' | 'low-quality' | 'high-quality'>('loading');
-
-  useEffect(() => {
-    const timer1 = setTimeout(() => setLoadingPhase('low-quality'), 1000);
-    const timer2 = setTimeout(() => setLoadingPhase('high-quality'), 2000);
-    return () => { clearTimeout(timer1); clearTimeout(timer2); };
-  }, []);
-
   return (
     <section id="about" className="pb-20 sm:pb-24 lg:pb-28">
       <Container>
@@ -125,65 +108,61 @@ export default function About() {
             </p>
           </motion.div>
 
-          {loadingPhase === 'loading' ? (
-            <LoadingSpinner />
-          ) : (
-            <motion.div
-              variants={containerMotion}
-              className="mt-10 grid w-full gap-y-10 md:grid-cols-2 md:gap-x-8 lg:grid-cols-4 lg:gap-x-0"
-            >
-              {teamMembers.map((member, index) => {
-                const isFirstInDesktopRow = index % 4 === 0;
+          <motion.div
+            variants={containerMotion}
+            className="mt-10 grid w-full gap-y-10 md:grid-cols-2 md:gap-x-8 lg:grid-cols-4 lg:gap-x-0"
+          >
+            {teamMembers.map((member, index) => {
+              const isFirstInDesktopRow = index % 4 === 0;
 
-                return (
-                  <motion.div
-                    key={member.id}
-                    variants={itemMotion}
-                    className={`w-full border-black/8 ${!isFirstInDesktopRow ? "lg:border-l" : ""}`}
-                  >
-                    <div className="w-full lg:pl-5 lg:pr-5">
-                      <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">
-                        {member.id}
-                      </div>
+              return (
+                <motion.div
+                  key={member.id}
+                  variants={itemMotion}
+                  className={`w-full border-black/8 ${!isFirstInDesktopRow ? "lg:border-l" : ""}`}
+                >
+                  <div className="w-full lg:pl-5 lg:pr-5">
+                    <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">
+                      {member.id}
+                    </div>
 
-                      <div className="flex h-[250px] w-full items-center justify-center rounded-[14px]">
-                        <div className="text-center">
-                          <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                            <img
-                              src={member.image}
-                              alt={`${member.name}'s photo`}
-                              className={`w-full h-full object-cover rounded-[14px] ${loadingPhase === 'low-quality' ? 'blur-sm' : ''}`}
-                            />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="mt-5 w-full">
-                        <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-black/90">
-                          {member.name}
-                        </h3>
-
-                        <p className="mt-1 text-[13px] text-black/45">
-                          {member.role}
-                        </p>
-
-                        <a
-                          href={`mailto:${member.email}`}
-                          className="mt-2 inline-block text-[13px] text-black/38 transition hover:text-black/65"
-                        >
-                          {member.email}
+                    <div className="flex h-[250px] w-full items-center justify-center rounded-[14px]">
+                      <div className="text-center">
+                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                          <img
+                            src={member.image}
+                            alt={`${member.name}'s photo`}
+                            className="w-full h-full object-cover rounded-[14px]"
+                          />
                         </a>
-
-                        <p className="mt-4 max-w-[250px] text-[14px] leading-5.5 text-black/56">
-                          {member.achievement}
-                        </p>
                       </div>
                     </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          )}
+
+                    <div className="mt-5 w-full">
+                      <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-black/90">
+                        {member.name}
+                      </h3>
+
+                      <p className="mt-1 text-[13px] text-black/45">
+                        {member.role}
+                      </p>
+
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="mt-2 inline-block text-[13px] text-black/38 transition hover:text-black/65"
+                      >
+                        {member.email}
+                      </a>
+
+                      <p className="mt-4 max-w-[250px] text-[14px] leading-5.5 text-black/56">
+                        {member.achievement}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </motion.div>
       </Container>
     </section>
