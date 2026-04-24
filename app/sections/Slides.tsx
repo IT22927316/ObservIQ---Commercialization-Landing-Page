@@ -22,7 +22,7 @@ const slideItems = [
       "First progress deck presenting the initial findings, architecture direction, and the early stages of implementation.",
     href: "https://drive.google.com/file/d/1mXWaMxyIKrk9ZxScvXXsw4RQB0Q5WZ5g/view?usp=drive_link",
     tone: "blue",
-    image: "/images/pp1.png", 
+    image: "/images/pres1.png", 
   },
   {
     id: "SLD 0.3",
@@ -31,7 +31,7 @@ const slideItems = [
       "Second progress deck showing deeper implementation progress, and milestone completion.",
     href: "https://drive.google.com/file/d/1lKhuCUYA1FUriG-zDKZC1ySc0Wq7du7o/view?usp=sharing",
     tone: "violet",
-    image: "/images/pp2.png", 
+    image: "/images/pres2.png", 
   },
   {
     id: "SLD 0.4",
