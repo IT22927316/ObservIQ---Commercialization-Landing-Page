@@ -23,7 +23,7 @@ export default function Methodology() {
             <p className="w-full text-[14px] leading-7 text-black/70 mb-6">
               The methodology for the Metric & Signal Discovery Agent (MSDA) focuses on automating the discovery and collection of relevant telemetry signals across microservices. To achieve this, we will:
             </p>
-            <ul className="list-disc list-inside text-black/70 space-y-2">
+            <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
               <li>Perform static and dynamic program analysis on service code to identify missing KPIs.</li>
               <li>Implement a route-intent classification module that maps API routes to semantic intent categories, allowing the agent to autonomously recommend KPIs based on the operational role of an endpoint.</li>
               <li>Integrate with OpenTelemetry and Prometheus exporters to ensure that discovered signals are captured and stored in a standardized manner.</li>
@@ -36,7 +36,7 @@ export default function Methodology() {
             <p className="w-full text-[14px] leading-7 text-black/70 mb-6">
               The methodology for the Log Structuring & Enrichment Agent (LSEA) focuses on transforming unstructured logs into meaningful, structured data streams that are easy to analyze. To accomplish this, the LSEA will:
             </p>
-            <ul className="list-disc list-inside text-black/70 space-y-2">
+            <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
               <li>Use advanced log parsing techniques, such as semantic classification with Large Language Models (LLMs), to ensure that logs are categorized by their semantic intent (e.g., state transitions, error events).</li>
               <li>Integrate with existing log management systems such as OpenTelemetry and Elasticsearch to enrich logs with necessary metadata like trace IDs and user session identifiers.</li>
               <li>Incorporate a privacy-preserving mechanism (Privacy Guard) to automatically redact personally identifiable information (PII) from logs, ensuring compliance with regulations like GDPR.</li>
@@ -49,7 +49,7 @@ export default function Methodology() {
             <p className="w-full text-[14px] leading-7 text-black/70 mb-6">
               The methodology for the Adaptive Alert Tuning Agent (AATA) revolves around reducing alert fatigue by dynamically adjusting alert thresholds based on real-time system behavior and operator feedback. The approach will involve:
             </p>
-            <ul className="list-disc list-inside text-black/70 space-y-2">
+            <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
               <li>Developing a feedback loop that adjusts alerting thresholds based on the false positive rates observed from previous alerts and operator responses.</li>
               <li>Implementing machine learning models (e.g., statistical forecasting, ensemble methods) to predict alert levels and determine the urgency of alerts, ensuring that operators only receive notifications when necessary.</li>
               <li>Incorporating a self-healing mechanism that allows the system to learn from historical incident data and continuously optimize alert thresholds to reduce noise and increase alert relevance.</li>
@@ -62,7 +62,7 @@ export default function Methodology() {
             <p className="w-full text-[14px] leading-7 text-black/70 mb-6">
               The methodology for the Anomaly Detection & Insight Agent (ADIIA) aims to correlate anomalies across multiple telemetry sources (logs, metrics, and traces) and generate coherent incident stories. The steps involved in this process include:
             </p>
-            <ul className="list-disc list-inside text-black/70 space-y-2">
+            <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
               <li>Developing machine learning models like Isolation Forest and Random Forest to identify and classify anomalies within telemetry data.</li>
               <li>Correlating anomalies across logs, metrics, and traces to understand the broader impact of incidents and to provide a cohesive view of the system state.</li>
               <li>Using the Random Forest-based scoring mechanism to rank incident causes and provide root cause analysis, allowing the system to generate a narrative of what happened during an anomaly.</li>
@@ -75,7 +75,7 @@ export default function Methodology() {
             <p className="w-full text-[14px] leading-7 text-black/70 mb-6">
               The methodology will include comprehensive performance evaluations across key metrics like false positive reduction, anomaly detection accuracy, system scalability, and operational efficiency. The evaluation will include:
             </p>
-            <ul className="list-disc list-inside text-black/70 space-y-2">
+            <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
               <li>Assessing the effectiveness of the Metric & Signal Discovery Agent in identifying missing KPIs during system updates.</li>
               <li>Measuring the accuracy and efficiency of the Log Structuring & Enrichment Agent in transforming unstructured logs into actionable insights.</li>
               <li>Evaluating the reduction in alert fatigue and false positives using the Adaptive Alert Tuning Agent and comparing it against traditional static thresholding systems.</li>
@@ -86,7 +86,7 @@ export default function Methodology() {
               <h3 className="text-[18px] font-semibold text-black mb-3">
                 References
               </h3>
-              <ul className="list-disc list-inside text-black/70 space-y-2">
+              <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
                 <li><a href="https://arxiv.org/abs/2302.06648" target="_blank" rel="noopener noreferrer">Zhang & Wu (2021) - "Prototype-Level Automation for Cloud Observability"</a></li>
                 <li><a href="https://techscience.com" target="_blank" rel="noopener noreferrer">DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning</a></li>
                 <li><a href="https://github.com/logpai/Drain3" target="_blank" rel="noopener noreferrer">Drain3: Robust Streaming Log Template Miner</a></li>

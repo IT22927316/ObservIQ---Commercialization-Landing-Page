@@ -59,7 +59,7 @@ export default function ResearchGap() {
               The core research problem identified is the absence of a unified, adaptive middleware framework capable of autonomously transforming static, siloed, and noisy telemetry into context-rich, proactive observability insights. Modern microservice-based architectures generate massive volumes of heterogeneous data, but the tools used to manage them remain reactive and fragmented. This research aims to bridge these gaps by addressing the following fundamental sub-challenges:
             </p>
 
-            <ul className="list-disc list-inside text-black/70 space-y-2">
+            <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
               <li>How to automatically discover and configure missing KPIs at both the code and runtime levels to eliminate monitoring blind spots without requiring extensive manual intervention.</li>
               <li>How to move from rigid, static alerting to a feedback-driven mechanism that autonomously refines thresholds and suppresses noise by learning from historical operator responses.</li>
               <li>How to synthesize fragmented anomalies across disparate telemetry streams (logs, metrics, traces) into a coherent, actionable narrative that explains the root cause and impact of system incidents.</li>
@@ -76,7 +76,7 @@ export default function ResearchGap() {
               <h3 className="text-[18px] font-semibold text-black mb-3">
                 References
               </h3>
-              <ul className="list-disc list-inside text-black/70 space-y-2">
+              <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
                 <li><a href="https://arxiv.org/abs/2302.06648" target="_blank" rel="noopener noreferrer">Zhang & Wu (2021) - "Prototype-Level Automation for Cloud Observability"</a></li>
                 <li><a href="https://techscience.com" target="_blank" rel="noopener noreferrer">DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning</a></li>
                 <li><a href="https://github.com/logpai/Drain3" target="_blank" rel="noopener noreferrer">Drain3: Robust Streaming Log Template Miner</a></li>

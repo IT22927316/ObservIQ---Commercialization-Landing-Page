@@ -56,7 +56,7 @@ export default function ResearchObjectives() {
               <h3 className="text-[18px] font-semibold text-black mb-3">
                 References
               </h3>
-              <ul className="list-disc list-inside text-black/70 space-y-2">
+              <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
                 <li><a href="https://arxiv.org/abs/2302.06648" target="_blank" rel="noopener noreferrer">Zhang & Wu (2021) - "Prototype-Level Automation for Cloud Observability"</a></li>
                 <li><a href="https://techscience.com" target="_blank" rel="noopener noreferrer">DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning</a></li>
                 <li><a href="https://github.com/logpai/Drain3" target="_blank" rel="noopener noreferrer">Drain3: Robust Streaming Log Template Miner</a></li>

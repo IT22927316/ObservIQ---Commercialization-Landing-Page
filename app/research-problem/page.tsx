@@ -52,7 +52,7 @@ export default function ResearchProblem() {
               The core research problem is the need for a unified, adaptive middleware framework that can autonomously transform siloed, noisy telemetry into actionable, context-rich observability insights. Modern microservice architectures generate vast amounts of heterogeneous data, but the tools to process and interpret this data are often fragmented, reactive, and manually intensive. The research aims to bridge these gaps by addressing the following challenges:
             </p>
 
-            <ul className="list-disc list-inside text-black/70 space-y-2">
+            <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
               <li>Automatically discover and configure missing KPIs at both the code and runtime levels to eliminate telemetry blind spots without manual intervention.</li>
               <li>Shift from static, rigid alerting to adaptive, feedback-driven mechanisms that continuously refine thresholds based on historical operator responses.</li>
               <li>Synthesize fragmented anomalies across disparate telemetry streams into coherent, actionable narratives that explain the root cause and impact of system incidents.</li>
@@ -69,7 +69,7 @@ export default function ResearchProblem() {
               <h3 className="text-[18px] font-semibold text-black mb-3">
                 References
               </h3>
-              <ul className="list-disc list-inside text-black/70 space-y-2">
+              <ul className="list-disc list-inside text-black/70 space-y-2 text-[14px]">
                 <li><a href="https://arxiv.org/abs/2302.06648" target="_blank" rel="noopener noreferrer">Zhang & Wu (2021) - "Prototype-Level Automation for Cloud Observability"</a></li>
                 <li><a href="https://techscience.com" target="_blank" rel="noopener noreferrer">DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning</a></li>
                 <li><a href="https://github.com/logpai/Drain3" target="_blank" rel="noopener noreferrer">Drain3: Robust Streaming Log Template Miner</a></li>
