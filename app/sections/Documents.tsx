@@ -38,14 +38,14 @@ const documentItems = [
     title: "Final Report",
     type: "PDF",
     status: "Pending",
-    href: "#",
+    href: "",
   },
   {
     id: "DOC 0.6",
     title: "Log Book / Supporting Files",
     type: "PDF",
     status: "Pending",
-    href: "#",
+    href: "",
   },
   {
     id: "VID 0.1",
