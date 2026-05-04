@@ -38,15 +38,15 @@ const documentItems = [
     title: "Final Thesis Reports",
     type: "PDF",
     status: "Available",
-    href: "",
+    href: "https://drive.google.com/drive/folders/1GZWotR7R9SPLCitL5OIXXTHAaeGXxV9A?usp=sharing",
   },
-  //{
-  //  id: "DOC 0.6",
-  //  title: "Log Book / Supporting Files",
-  //  type: "PDF",
-  //  status: "Pending",
-  //  href: "",
-  //},
+  {
+    id: "DOC 0.6",
+    title: "Log Book / Supporting Files",
+    type: "PDF",
+    status: "Available",
+    href: "https://drive.google.com/drive/folders/1CghcHCFdL979-EZBcc4JGEXtcth_vAzJ?usp=sharing",
+  },
   {
     id: "VID 0.1",
     title: "Product Demo Video",
