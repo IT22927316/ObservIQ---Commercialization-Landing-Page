@@ -59,20 +59,6 @@ export default function Footer() {
           >
             Transforming challenges into opportunities, we craft innovative solutions today to build a brighter and more sustainable tomorrow.
           </p>
-
-          {/* Social icons */}
-          <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.64746 0.0966797C7.68713 0.0966797 8.60726 0.173857 8.89355 0.211914C9.12532 0.242692 9.29863 0.440273 9.29883 0.673828V3.20605C9.29883 3.46354 9.08964 3.67285 8.83203 3.67285L7.33301 3.67383C6.89228 3.67384 6.67218 3.7487 6.55469 3.87891C6.43502 4.01169 6.39651 4.22781 6.39648 4.58496V5.92578H8.7334C8.86759 5.92578 8.99543 5.98452 9.08398 6.08496C9.17239 6.18563 9.2134 6.31926 9.19629 6.45215L8.83105 9.28418C8.80082 9.51651 8.60255 9.69043 8.36816 9.69043H6.39648V16.4883C6.39648 16.7458 6.18745 16.9551 5.92969 16.9551H3.00684C2.74929 16.9551 2.54004 16.7458 2.54004 16.4883V9.69043H0.561523C0.304091 9.69029 0.0957031 9.4811 0.0957031 9.22363V6.39258C0.0958979 6.13528 0.304211 5.92689 0.561523 5.92676H2.54004V4.30469C2.54013 3.01703 2.93094 1.96309 3.64551 1.23047C4.36042 0.497593 5.38952 0.0966915 6.64746 0.0966797ZM6.64746 1.0293C5.64347 1.02931 4.85327 1.33813 4.31348 1.89453C3.77335 2.45133 3.47271 3.26752 3.47266 4.30469V6.39258C3.47266 6.65013 3.26341 6.85938 3.00586 6.85938H1.02832V8.75781H3.00684C3.26405 8.75805 3.47243 8.96642 3.47266 9.22363V16.0225H5.46387V9.22363C5.46409 8.96642 5.67247 8.75804 5.92969 8.75781H7.95801L8.20312 6.85938H5.92969C5.67225 6.85925 5.46387 6.65005 5.46387 6.39258V4.58496C5.4639 4.20558 5.50893 3.74279 5.77148 3.37402C6.03917 2.99837 6.51692 2.74023 7.33301 2.74023H8.36523V1.09668C7.95682 1.06386 7.33216 1.0293 6.64746 1.0293Z" fill="#8D8D8D" stroke="#8D8D8D" strokeWidth="0.192308"/>
-              </svg>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.09475 1.08306H1.92322L11.9188 15.6329H14.0903L4.09475 1.08306ZM0 0H4.77201L8.90948 6.12761L14.0896 0H15.5033L9.53726 7.05734L16.0256 16.6667H11.2536L6.88425 10.1956L1.41381 16.6667H0L6.25648 9.26585L0 0Z" fill="#8D8D8D"/>
-              </svg>
-            </a>
-          </div>
         </div>
 
         {/* Right: nav link columns */}
@@ -82,28 +68,7 @@ export default function Footer() {
             {["Home", "Domain", "Milestones", "Documents", "Slides"].map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase()}`}  // Dummy link
-                style={{
-                  color: "#8D8D8D",
-                  fontSize: 15,
-                  fontFamily: "var(--font-poppins), Poppins, sans-serif",
-                  fontWeight: 400,
-                  lineHeight: "18px",
-                  cursor: "pointer",
-                  textDecoration: "none",
-                }}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-
-          {/* Column 2 */}
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8.33 }}>
-            {["About", "Our Policy", "Contact", "Terms of Service", "Privacy Policy"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}  // Dummy link
+                href={`#${item.toLowerCase()}`}  
                 style={{
                   color: "#8D8D8D",
                   fontSize: 15,

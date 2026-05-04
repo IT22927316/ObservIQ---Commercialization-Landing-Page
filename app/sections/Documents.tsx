@@ -35,18 +35,18 @@ const documentItems = [
   },
   {
     id: "DOC 0.5",
-    title: "Final Report",
+    title: "Final Thesis Reports",
     type: "PDF",
-    status: "Pending",
+    status: "Available",
     href: "",
   },
-  {
-    id: "DOC 0.6",
-    title: "Log Book / Supporting Files",
-    type: "PDF",
-    status: "Pending",
-    href: "",
-  },
+  //{
+  //  id: "DOC 0.6",
+  //  title: "Log Book / Supporting Files",
+  //  type: "PDF",
+  //  status: "Pending",
+  //  href: "",
+  //},
   {
     id: "VID 0.1",
     title: "Product Demo Video",

@@ -9,7 +9,7 @@ const milestoneItems = [
   {
     id: "01",
     title: "Project Proposal",
-    date: "May 2026",
+    date: "September 2025",
     marks: "Marks allocated here",
     description:
       "Initial proposal submission covering the project idea, scope, research direction, objectives, and early planning.",
@@ -17,7 +17,7 @@ const milestoneItems = [
   {
     id: "02",
     title: "Progress Presentation 1",
-    date: "June 2026",
+    date: "January 2026",
     marks: "Marks allocated here",
     description:
       "First progress review showing initial research findings, architecture direction, and early implementation progress.",
@@ -25,7 +25,7 @@ const milestoneItems = [
   {
     id: "03",
     title: "Progress Presentation 2",
-    date: "August 2026",
+    date: "March 2026",
     marks: "Marks allocated here",
     description:
       "Second evaluation covering deeper implementation progress, technical refinement, and milestone completion.",
@@ -33,7 +33,7 @@ const milestoneItems = [
   {
     id: "04",
     title: "Final Assessment",
-    date: "October 2026",
+    date: "May 2026",
     marks: "Marks allocated here",
     description:
       "Final project submission and full evaluation of the completed system, report, and technical outcome.",
@@ -41,7 +41,7 @@ const milestoneItems = [
   {
     id: "05",
     title: "Viva",
-    date: "October 2026",
+    date: "May 2026",
     marks: "Marks allocated here",
     description:
       "Final presentation and discussion of the project, demonstrating understanding of the research and implementation.",
@@ -136,9 +136,7 @@ export default function Milestones() {
                       <span className="hidden rounded-full border border-black/8 px-2.5 py-1 text-[10px] text-black/45 sm:inline-flex">
                         {item.date}
                       </span>
-                      <span className="hidden rounded-full border border-black/8 px-2.5 py-1 text-[10px] text-black/45 sm:inline-flex">
-                        {item.marks}
-                      </span>
+                      
                       <span className="flex h-8 w-8 items-center justify-center rounded-full border border-black/8 text-[14px] text-black/50">
                         {isOpen ? "−" : "+"}
                       </span>
