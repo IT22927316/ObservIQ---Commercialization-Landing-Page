@@ -9,11 +9,14 @@ export default function Navbar() {
   const navRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    // Ensure this only runs on client
+    if (typeof window === "undefined") return;
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".nav-anim",
         { opacity: 0, y: -16 },
-        { opacity: 1, y: 0, duration: 0.7, ease: "power3.out", delay: 0.05 }
+        { opacity: 1, y: 0, duration: 0.7, ease: "power3.out", delay: 0.05 },
       );
     }, navRef);
 
@@ -33,25 +36,46 @@ export default function Navbar() {
         </div>
 
         <nav className="hidden items-center gap-8 md:flex">
-          <Link href="/#home" className="text-[13px] text-black/55 transition hover:text-black/85">
+          <Link
+            href="/#home"
+            className="text-[13px] text-black/55 transition hover:text-black/85"
+          >
             Home
           </Link>
-          <Link href="/#domain" className="text-[13px] text-black/55 transition hover:text-black/85">
+          <Link
+            href="/#domain"
+            className="text-[13px] text-black/55 transition hover:text-black/85"
+          >
             Domain
           </Link>
-          <Link href="/#milestones" className="text-[13px] text-black/55 transition hover:text-black/85">
+          <Link
+            href="/#milestones"
+            className="text-[13px] text-black/55 transition hover:text-black/85"
+          >
             Milestones
           </Link>
-          <Link href="/#documents" className="text-[13px] text-black/55 transition hover:text-black/85">
+          <Link
+            href="/#documents"
+            className="text-[13px] text-black/55 transition hover:text-black/85"
+          >
             Documents
           </Link>
-          <Link href="/#slides" className="text-[13px] text-black/55 transition hover:text-black/85">
+          <Link
+            href="/#slides"
+            className="text-[13px] text-black/55 transition hover:text-black/85"
+          >
             Slides
           </Link>
-          <Link href="/#about" className="text-[13px] text-black/55 transition hover:text-black/85">
+          <Link
+            href="/#about"
+            className="text-[13px] text-black/55 transition hover:text-black/85"
+          >
             About
           </Link>
-          <Link href="/#contact" className="text-[13px] text-black/55 transition hover:text-black/85">
+          <Link
+            href="/#contact"
+            className="text-[13px] text-black/55 transition hover:text-black/85"
+          >
             Contact
           </Link>
         </nav>
@@ -60,7 +84,7 @@ export default function Navbar() {
         <Link
           href="/#contact"
           className="inline-flex items-center justify-center rounded-full bg-black/90 px-5 py-3 text-sm font-medium text-white no-underline transition hover:bg-black/80"
-          style={{ color: 'white' }}
+          style={{ color: "white" }}
         >
           Contact us
         </Link>

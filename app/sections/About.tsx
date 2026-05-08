@@ -12,8 +12,8 @@ const teamMembers = [
     email: "IT22927316@my.sliit.lk",
     achievement:
       "Leads research and development for metrics and signal processing. Contributes to defining signal strategies for the project.",
-    image: "/images/im_1.png", 
-    linkedin: "https://www.linkedin.com/in/rusiruds/", 
+    image: "/images/im_1.png",
+    linkedin: "https://www.linkedin.com/in/rusiruds/",
   },
   {
     id: "MEM 0.2",
@@ -23,7 +23,7 @@ const teamMembers = [
     achievement:
       "Focused on structuring and enriching the system's logs, improving data flow and enhancing insights derived from system activities.",
     image: "/images/im_2.png", // Image path for person2
-    linkedin: "https://www.linkedin.com/in/nimashagamage/", 
+    linkedin: "https://www.linkedin.com/in/nimashagamage/",
   },
   {
     id: "MEM 0.3",
@@ -33,7 +33,7 @@ const teamMembers = [
     achievement:
       "Developed and fine-tuned adaptive alerting mechanisms to improve the system's responsiveness to critical events.",
     image: "/images/im_3.png", // Image path for person3
-    linkedin: "https://www.linkedin.com/in/nayanahari-kusalanjani/", 
+    linkedin: "https://www.linkedin.com/in/nayanahari-kusalanjani/",
   },
   {
     id: "MEM 0.4",
@@ -44,6 +44,26 @@ const teamMembers = [
       "Managed the detection of anomalies in system behavior and generated insights to support critical decision-making.",
     image: "/images/im_4.png", // Image path for person4
     linkedin: "https://www.linkedin.com/in/lavindu-yomith-5b9b69187/",
+  },
+  {
+    id: "SUPERVISOR ",
+    name: "Prof. Sanvitha Kasthuriarachchi",
+    role: "Supervisor",
+    email: "sanvitha.k@sliit.lk",
+    achievement:
+      "Provided overall guidance and supervision for the project, ensuring alignment with academic standards and project goals.",
+    image: "/images/mem5.jpeg", // Image path for person4
+    linkedin: "",
+  },
+  {
+    id: "CO-SUPERVISOR ",
+    name: "Ms. Akshi De Silva",
+    role: "Co-Supervisor",
+    email: "akshi.d@sliit.lk",
+    achievement:
+      "Provided co-supervision and support for the project, contributing to its overall success and academic rigor.",
+    image: "/images/mem6.jpeg", // Image path for person4
+    linkedin: "",
   },
 ];
 
@@ -119,41 +139,41 @@ export default function About() {
                 <motion.div
                   key={member.id}
                   variants={itemMotion}
-                    className={`w-full min-h-0 border-black/8 ${!isFirstInDesktopRow ? "lg:border-l" : ""}`}
-                  >
-                    <div className="w-full min-h-0 lg:pl-5 lg:pr-5">
-                      <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">
-                        {member.id}
-                      </div>
+                  className={`w-full min-h-0 border-black/8 ${!isFirstInDesktopRow ? "lg:border-l" : ""}`}
+                >
+                  <div className="w-full min-h-0 lg:pl-5 lg:pr-5">
+                    <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">
+                      {member.id}
+                    </div>
+
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full overflow-hidden rounded-[14px]"
+                    >
+                      <img
+                        src={member.image}
+                        alt={`${member.name}'s photo`}
+                        className="w-full h-auto object-contain rounded-[14px]"
+                      />
+                    </a>
+
+                    <div className="mt-5 w-full">
+                      <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-black/90">
+                        {member.name}
+                      </h3>
+
+                      <p className="mt-1 text-[13px] text-black/45">
+                        {member.role}
+                      </p>
 
                       <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full overflow-hidden rounded-[14px]"
+                        href={`mailto:${member.email}`}
+                        className="mt-2 inline-block text-[13px] text-black/38 transition hover:text-black/65"
                       >
-                        <img
-                          src={member.image}
-                          alt={`${member.name}'s photo`}
-                          className="w-full h-auto object-contain rounded-[14px]"
-                        />
+                        {member.email}
                       </a>
-
-                      <div className="mt-5 w-full">
-                        <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-black/90">
-                          {member.name}
-                        </h3>
-
-                        <p className="mt-1 text-[13px] text-black/45">
-                          {member.role}
-                        </p>
-
-                        <a
-                          href={`mailto:${member.email}`}
-                          className="mt-2 inline-block text-[13px] text-black/38 transition hover:text-black/65"
-                        >
-                          {member.email}
-                        </a>
 
                       <p className="mt-4 w-full text-[14px] leading-5.5 text-black/56 break-words">
                         {member.achievement}

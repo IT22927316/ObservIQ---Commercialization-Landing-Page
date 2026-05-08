@@ -171,6 +171,8 @@ export default function Slides() {
               {slideItems.map((item, index) => {
                 const tone = getToneClasses(item.tone);
                 const isFirstInDesktopRow = index % 4 === 0;
+                const isLastTwo = index >= 2;
+                const centerClasses = isLastTwo ? "md:col-span-1 md:flex md:justify-center md:items-start" : "";
 
                 return (
                   <motion.div
@@ -178,7 +180,7 @@ export default function Slides() {
                     variants={itemMotion}
                     className={`w-full border-black/8 ${
                       !isFirstInDesktopRow ? "lg:border-l" : ""
-                    }`}
+                    } ${centerClasses}`}
                   >
                     <div className="w-full lg:pl-5 lg:pr-5">
                       <div className="mb-4 text-[10px] uppercase tracking-[0.16em] text-black/35">

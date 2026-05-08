@@ -46,7 +46,8 @@ export default function Hero() {
             variants={fadeUp}
             className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-black/45"
           >
-            Smart Observability Middleware
+            Smart Observability Middleware For Adaptive Microservice Application
+            Monitoring
           </motion.p>
 
           <motion.h1
@@ -72,7 +73,7 @@ export default function Hero() {
             <a
               href="https://github.com/nimashag/nodejs-springboot-observabilitydata-collection-app"
               className="inline-flex items-center justify-center rounded-full bg-black/90 px-5 py-3 text-sm font-medium text-white no-underline transition hover:bg-black/80"
-              style={{ color: 'white' }}
+              style={{ color: "white" }}
               target="_blank"
             >
               Explore project
