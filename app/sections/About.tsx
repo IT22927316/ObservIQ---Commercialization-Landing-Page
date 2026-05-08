@@ -9,7 +9,7 @@ const teamMembers = [
     id: "MEM 0.1",
     name: "Rusiru De Silva",
     role: "Metric & Signal Discovery Lead",
-    email: "IT22927316@my.sliit.lk",
+    email: "rusiru.zyner@gmail.com",
     achievement:
       "Leads research and development for metrics and signal processing. Contributes to defining signal strategies for the project.",
     image: "/images/im_1.png",
@@ -19,7 +19,7 @@ const teamMembers = [
     id: "MEM 0.2",
     name: "Nimasha Piyumini",
     role: "Log Structure & Enrichment Lead",
-    email: "IT22034922@my.sliit.lk",
+    email: "nimasha.piyumini@gmail.com",
     achievement:
       "Focused on structuring and enriching the system's logs, improving data flow and enhancing insights derived from system activities.",
     image: "/images/im_2.png", // Image path for person2
@@ -29,7 +29,7 @@ const teamMembers = [
     id: "MEM 0.3",
     name: "Nayanahari Kusalanjani",
     role: "Adaptive Alert Tuning Lead",
-    email: "IT22034540@my.sliit.lk",
+    email: "nayanaharikusalanajani@gmail.com",
     achievement:
       "Developed and fine-tuned adaptive alerting mechanisms to improve the system's responsiveness to critical events.",
     image: "/images/im_3.png", // Image path for person3
@@ -39,7 +39,7 @@ const teamMembers = [
     id: "MEM 0.4",
     name: "Yomith Gamage",
     role: "Anomaly Detection & Insight Lead",
-    email: "IT22195470@my.sliit.lk",
+    email: "lavinduyomith2016@gmail.com",
     achievement:
       "Managed the detection of anomalies in system behavior and generated insights to support critical decision-making.",
     image: "/images/im_4.png", // Image path for person4
