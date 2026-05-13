@@ -52,7 +52,7 @@ const teamMembers = [
     email: "sanvitha.k@sliit.lk",
     achievement:
       "Provided overall guidance and supervision for the project, ensuring alignment with academic standards and project goals.",
-    image: "/images/mem5.jpeg", // Image path for person4
+    image: "/images/mem6.webp", // Image path for person4
     linkedin: "",
   },
   {
@@ -62,7 +62,7 @@ const teamMembers = [
     email: "akshi.d@sliit.lk",
     achievement:
       "Provided co-supervision and support for the project, contributing to its overall success and academic rigor.",
-    image: "/images/mem6.jpeg", // Image path for person4
+    image: "/images/mem5.webp", // Image path for person4
     linkedin: "",
   },
 ];
